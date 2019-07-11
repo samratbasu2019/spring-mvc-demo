@@ -43,8 +43,7 @@ public class UserService implements IUserService {
 		
 		  try {
 	   	    	
-		//	System.out.println("Service Layer User Name "+username+" pasaword " + password);
-	   	    	result= userDAO.getUser(username, password);
+		    	result= userDAO.getUser(username, password);
 	         
 	    	}
 		  	catch (Exception e) {

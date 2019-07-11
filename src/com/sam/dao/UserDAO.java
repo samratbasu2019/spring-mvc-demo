@@ -2,20 +2,20 @@ package com.sam.dao;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
 import com.sam.entity.UserRegistration;
 import com.sam.model.UserDetail;
 
 
 @Repository
 public class UserDAO{
+	private final static Logger log = Logger.getLogger(UserDAO.class);
 	private SessionFactory sessionFactory;
 	
 	@Autowired
@@ -38,7 +38,7 @@ public class UserDAO{
 		 Session session = sessionFactory.openSession();
 		 Query query = null;
 		 List<UserDetail> p = null;
-		 System.out.println("DAO Layer User id is " + username+" password : "+password);
+		 log.debug("DAO Layer User id is " + username+" password : "+password);
 		 query = session.getNamedQuery("getUserDetails");
 		 query.setString("username", username);
 		 query.setString("password", password);
