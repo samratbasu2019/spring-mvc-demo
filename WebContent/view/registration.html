@@ -1,0 +1,51 @@
+<form name="registrationform">
+	<table>
+		<tr>
+			<td>User Name :</td>
+			<td><input type="text" name="username" ng-model="username" required>		
+			</td>
+			<td>
+				<span style="color:red" ng-show="registrationform.username.$dirty && registrationform.username.$invalid">
+  					<span ng-show="registrationform.username.$error.required">Username is required.</span>
+  				</span>
+			</td>
+		</tr>
+		<tr>
+			<td>Password :</td>
+			<td><input type="password" name="password" ng-model="password" required></td>
+			<td>
+				<span style="color:red" ng-show="registrationform.password.$dirty && registrationform.password.$invalid">
+  					<span ng-show="registrationform.password.$error.required">Password is required.</span>
+  				</span>
+		</tr>
+		<tr>
+			<td>Address :</td>
+			<td><input type="address" ng-model="address" required></td>
+		</tr>
+		<tr>
+			<td>Email :</td>
+			<td><input type="email" name="email" ng-model="email" required></td>
+			<td><span style="color:red" ng-show="registrationform.email.$dirty && registrationform.email.$invalid">
+  					<span ng-show="registrationform.email.$error.required">Email is required.</span>
+  					<span ng-show="registrationform.email.$error.email">Invalid email address.</span>
+  				</span>
+  			</td>
+		</tr>
+		<tr>
+			<td>Sate :</td>
+			<td><input type="state" ng-model="state" required></td>
+		</tr>
+		<tr>
+			<td>City :</td>
+			<td><input type="city" ng-model="city" required></td>
+		</tr>
+		<tr>
+			<td><button ng-click="submit()"
+					ng-disabled="registrationform.$invalid">Submit</button></td>
+			<td><a href="#/">go to home page</a></td>
+		</tr>
+	</table>
+</form>
+<div style="color:green" ng-show="hassave">
+	Data saved!!!
+</div>
