@@ -1,5 +1,4 @@
 package com.sam.model;
-
 public class UserDetail {
 	private String username;
 	private String password;

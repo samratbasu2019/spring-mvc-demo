@@ -15,8 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sam.model.UserDetail;
 import com.sam.service.IUserService;
 
-
-
 @RestController
 public class UserDetails { 
 	@Autowired

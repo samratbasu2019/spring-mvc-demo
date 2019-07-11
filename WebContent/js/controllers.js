@@ -1,5 +1,6 @@
 var myAppControllers = angular.module('myAppControllers', ['ngResource']);
 
+
 myAppControllers.controller("logoncontroller", function($scope, $location,$http,$rootScope) 
     {
 	

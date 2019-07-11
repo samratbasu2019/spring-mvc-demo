@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.sam.entity.UserRegistration;
 import com.sam.model.UserDetail;
 
+
 @Repository
 public class UserDAO{
 	private SessionFactory sessionFactory;

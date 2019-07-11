@@ -3,7 +3,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Samrat Angular Spring User Page</title>
-
 <script src="js/lib/angular.js"></script>
 <script src="js/lib/angular-route.js"></script>
 <script src="js/lib/angular-resource.min.js"></script>
